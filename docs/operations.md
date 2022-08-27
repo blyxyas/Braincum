@@ -4,7 +4,7 @@
 
 - - - -
 
-## 📜 Summary
+## Summary
 
 - [Specifiers](#specifiers)
     - [Subject specifiers](#subject-specifiers)
@@ -27,7 +27,7 @@
 
 ## Specifiers
 
-<sub>[[Summary](#📜-summary)]</sub>
+<sub>[[Summary](#summary)]</sub>
 
 A specifier indicates the execution context of the following operations until another specifier is encountered.
 
@@ -44,7 +44,7 @@ A specifier indicates the execution context of the following operations until an
 
 ## Operations
 
-<sub>[[Summary](#📜-summary)]</sub>
+<sub>[[Summary](#summary)]</sub>
 
 ### Memory operations
 
@@ -82,7 +82,7 @@ A specifier indicates the execution context of the following operations until an
 
 ## Functions
 
-<sub>[[Summary](#📜-summary)]</sub>
+<sub>[[Summary](#summary)]</sub>
 
 ### Utilitaries
 
@@ -98,7 +98,7 @@ A specifier indicates the execution context of the following operations until an
 
 ## Algorithms
 
-<sub>[[Summary](#📜-summary)]</sub>
+<sub>[[Summary](#summary)]</sub>
 
 ### Char algorithm
 
@@ -124,7 +124,7 @@ elif 196 <= value <= 255:
 
 ## Bottom Notes
 
-<sub>[[Summary](#📜-summary)]</sub>
+<sub>[[Summary](#summary)]</sub>
 
 ### Bottom Note 1
 

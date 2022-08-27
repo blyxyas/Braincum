@@ -4,26 +4,26 @@ Braincum is a non-strict superset of the famous Brainfuck esoteric programming l
 
 - - - -
 
-## 📜 Summary
+## Summary
 
-- [🔎 Differences](#🔎-differences)
-    - [🔤 Grammar](#🔤-grammar)
-    - [🔢 Meaning of some characters](#🔢-meaning-of-some-characters)
-- [🤖 How Braincum works](#🤖-how-braincum-works)
-- [🚀 To go further](#🚀-to-go-further)
-- [💬 How to censor the language's name?](#💬-how-to-censor-the-languages-name)
+- [🔎 Differences](#differences)
+    - [🔤 Grammar](#grammar)
+    - [🔢 Meaning of some characters](#meaning-of-some-characters)
+- [🤖 How Braincum works](#how-braincum-works)
+- [🚀 To go further](#to-go-further)
+- [💬 How to censor the language's name?](#how-to-censor-the-languages-name)
 
 - - - -
 
-## 🔎 Differences
+## Differences
 
-### 🔤 Grammar
+### Grammar
 
 - Brainfuck relies on 8 characters that provide 8 different operations.
 - As for Braincum, the alphabet consists in 25 characters ;
 however, in contrary to Brainfuck, some of these can be combined, which gives a total of 33 instructions.
 
-### 🔢 Meaning of some characters
+### Meaning of some characters
 
 Let's give an example:
 - In Brainfuck, to move the pointer to the right, you would use `>`.
@@ -31,7 +31,7 @@ Let's give an example:
 
 > The meaning of `>` is completely different in Braincum: it shifts all the values to the right.
 
-## 🤖 How Braincum works
+## How Braincum works
 
 ➡️ When you do an operation in Braincum, you need to specify if it applies to the current cell's value (`$`) or the pointer (`&`).
 
@@ -50,11 +50,11 @@ Here's the equivalent in Brainfuck:
 
 🤩 But this is incredibly powerful as it means that you can also apply operations to the pointer (whose position is referred as "address" hereafter), making programs that would be long and complex in Brainfuck surprisingly short and simple.
 
-## 🚀 To go further
+## To go further
 
 Convinced? Check [`operations.md`](operations.md) to get a complete list of the nice features that Braincum has to offer.
 
-## 💬 How to censor the language's name?
+## How to censor the language's name?
 
 In some context, it may be inappropriate to spell the language's full name.
 
