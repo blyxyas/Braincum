@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "braincum"
+version = "0.1.0"
+description = "Braincum is a superset of the famous Brainfuck esoteric programming language."
+authors = ["Qexat <contact@qexat.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pytest = "^7.1.2"
+mypy = "^0.971"
+autopep8 = "^1.7.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
