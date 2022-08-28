@@ -52,7 +52,7 @@ Here's the equivalent in Brainfuck:
 
 ## To go further
 
-Convinced? Check [`operations.md`](operations.md) to get a complete list of the nice features that Braincum has to offer.
+Convinced? Check [`specs.md`](specs.md#braincum-language-specifications) to get a complete list of the nice features that Braincum has to offer.
 
 ## How to censor the language's name?
 
