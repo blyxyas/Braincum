@@ -1,4 +1,4 @@
-# Braincum Operations
+# Braincum Language Specifications
 
 [[Go to bottom](#bottom-notes) | [Home](README.md)]
 
