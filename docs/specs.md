@@ -55,7 +55,7 @@ A specifier indicates the execution context of the following operations until an
 - `^`: resets value/address to 0.
 - `~`: opposes value/address to bound<sup>[[1](#bottom-note-1)]</sup>.
 - `@`:
-    - value: sets to address % 255.
+    - value: sets to address modulo 255.
     - address: sets to value.
 - `'`: applies the [Char algorithm](#char-algorithm).
 - `"`: stringifies the value/address and changes to its ordinal<sup>[[2](#bottom-note-2)]</sup>.
