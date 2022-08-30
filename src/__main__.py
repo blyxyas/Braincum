@@ -38,7 +38,7 @@ class Program:
             args (list[str] | None, optional): args to be parsed. Defaults to None.
         """
 
-        self.args = self._parse_args(args or sys.argv)
+        self.args = self._parse_args(args or sys.argv[1:])
 
     def run(self: Program) -> int:
         """
@@ -51,7 +51,8 @@ class Program:
         file_path = Path(self.args.file).resolve()
 
         if not file_path.exists():
-            panic(Error.FileNotFound, file_path)
+            # panic(Error.FileNotFound, file_path)
+            raise SystemExit(1)
 
         content = file_path.read_text(encoding="utf-8")
 
