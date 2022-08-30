@@ -19,6 +19,7 @@
 - [Functions](#functions)
     - [Utilitaries](#utilitaries)
         - [Specifiable](#specifiable-2)
+- [Extras](#extras)
 - [Algorithms](#algorithms)
     - [Char algorithm](#char-algorithm)
 - [Bottom notes](#bottom-notes)
@@ -94,6 +95,12 @@ A specifier indicates the execution context of the following operations until an
     - value: multiplies by address.
     - address: multiplies by value.
 
+## Extras
+
+<sub>[[Summary](#summary)]</sub>
+
+- `\` comments out following characters.
+
 - - - -
 
 ## Algorithms
@@ -144,4 +151,4 @@ Example: 3 would be stringified to "3", which has an ordinal of 51.
 
     [[Go back up](#non-specifiable)]
 
-[[Go to top](#braincum-operations) | [Home](README.md)]
+[[Go to top](#braincum-language-specifications) | [Home](README.md)]
