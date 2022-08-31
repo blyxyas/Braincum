@@ -48,14 +48,31 @@ class UInt(Protocol, metaclass=_UIntMeta):
 
 
 @runtime_checkable
-class CellValue(Protocol, metaclass=_CellValueMeta):
-    pass
+class CellValue(UInt, Protocol, metaclass=_CellValueMeta):
+    def __int__(self) -> int: ...
+    def __index__(self) -> int: ...
+
+    @overload
+    def __add__(self, __x: CellValue, /) -> CellValue: ...
+    @overload
+    def __add__(self, __x: int, /) -> int: ...
+    @overload
+    def __add__(self, __x: float, /) -> float: ...
+    @overload
+    def __sub__(self, __x: CellValue, /) -> int: ...
+    @overload
+    def __sub__(self, __x: int, /) -> int: ...
+    @overload
+    def __sub__(self, __x: float, /) -> float: ...
+
+    @overload
+    def __rmul__(self, __x: CellValue, /) -> CellValue: ...
+    @overload
+    def __rmul__(self, __x: int, /) -> int: ...
+    @overload
+    def __rmul__(self, __x: str, /) -> str: ...
 
 
 # *- Technically unnecessary, it's for "code readability" -* #
 StartPos = UInt
 EndPos = UInt
-
-
-def test(x: UInt, y: UInt) -> UInt:
-    return x + y

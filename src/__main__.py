@@ -7,7 +7,7 @@ from argparse import ArgumentParser, Namespace
 from pathlib import Path
 from typing import NoReturn
 
-from braincum import Error, Interpreter, panic
+from braincum import Interpreter
 
 
 class Program:

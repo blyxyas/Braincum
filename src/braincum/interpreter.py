@@ -3,8 +3,7 @@
 from __future__ import annotations
 from enum import IntEnum
 
-from braincum import panic
-from braincum.errors import Error
+from braincum.errors import Error, panic
 
 __all__ = ["Interpreter"]
 
