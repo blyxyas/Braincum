@@ -1,6 +1,13 @@
 # 🧠💦 Braincum
 
-Braincum is a non-strict superset of the famous Brainfuck esoteric programming language.
+Braincum is an esoteric programming language heavily inspired on well-known [Brainfuck](https://en.wikipedia.org/wiki/Brainfuck).
+
+The Python implementation is NOT ready to run for now, **at all**.
+However, since specifications are defined on this repository, feel free to make your own in the language of your choice!
+
+If you have a question, please use the [Discussion tab](https://github.com/qexat/Braincum/discussions).
+
+You might wonder why this branch feels empty? The work is actually done on [another branch](https://github.com/qexat/Braincum/tree/1.0.0).
 
 - - - -
 
