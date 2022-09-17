@@ -123,7 +123,7 @@ Ensures that the value is in extended ASCII letter boundaries.
 A retranscription in Python of this algorithm would be as following:
 
 ```py
-if value <= 32:
+if value < 32:
 	value += 32
 elif value >= 256:
 	value %= 255
