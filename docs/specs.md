@@ -6,23 +6,28 @@
 
 ## Summary
 
-- [Specifiers](#specifiers)
-    - [Subject specifiers](#subject-specifiers)
-    - [Context specifiers](#context-specifiers)
-- [Operations](#operations)
-    - [Memory operations](#memory-operations)
-        - [Specifiable](#specifiable)
-        - [Non-Specifiable](#non-specifiable)
-    - [I/O operations](#io-operations)
-        - [Specifiable](#specifiable-1)
-        - [Non-Specifiable](#non-specifiable-1)
-- [Functions](#functions)
-    - [Utilitaries](#utilitaries)
-        - [Specifiable](#specifiable-2)
-- [Extras](#extras)
-- [Algorithms](#algorithms)
-    - [Char algorithm](#char-algorithm)
-- [Bottom notes](#bottom-notes)
+- [Braincum Language Specifications](#braincum-language-specifications)
+	- [Summary](#summary)
+	- [Specifiers](#specifiers)
+		- [Subject specifiers](#subject-specifiers)
+		- [Context specifiers](#context-specifiers)
+	- [Operations](#operations)
+		- [Memory operations](#memory-operations)
+			- [**Specifiable**](#specifiable)
+			- [**Non-Specifiable**](#non-specifiable)
+		- [I/O operations](#io-operations)
+			- [**Specifiable**](#specifiable-1)
+			- [**Non-Specifiable**](#non-specifiable-1)
+	- [Functions](#functions)
+		- [Utilitaries](#utilitaries)
+			- [**Specifiable**](#specifiable-2)
+	- [Extras](#extras)
+	- [Algorithms](#algorithms)
+		- [Char algorithm](#char-algorithm)
+	- [Bottom Notes](#bottom-notes)
+		- [Bottom Note 1](#bottom-note-1)
+		- [Bottom Note 2](#bottom-note-2)
+		- [Bottom Note 3](#bottom-note-3)
 
 - - - -
 
@@ -109,22 +114,19 @@ A specifier indicates the execution context of the following operations until an
 
 ### Char algorithm
 
-Ensures that the value is in ASCII letter boundaries.
+Ensures that the value is in extended ASCII letter boundaries.
 
-- If the value is below 64: adds 64.
-- If the value is between 64 and 127: does nothing.
-- If the value is between 128 and 195: removes 64.
-- If the value is above 195: removes 128.
+- If the value is below 32: adds 32.
+- If the value is between 32 and 255: does nothing.
+- If the value is above 256: The value clamps down to `value % 255`
 
 A retranscription in Python of this algorithm would be as following:
 
 ```py
-if value <= 64:
-    value += 64
-elif 128 <= value <= 195:
-    value -= 64
-elif 196 <= value <= 255:
-    value -= 128
+if value <= 32:
+	value += 32
+elif value >= 256:
+	value %= 255
 ```
 
 - - - -
