@@ -1,33 +1,37 @@
+<!-- markdownlint-disable MD024 MD033 -->
+
 # Braincum Language Specifications
 
 [[Go to bottom](#bottom-notes) | [Home](README.md)]
 
-- - - -
+---
 
 ## Summary
 
-- [Specifiers](#specifiers)
-	- [Subject specifiers](#subject-specifiers)
-	- [Context specifiers](#context-specifiers)
-- [Operations](#operations)
-	- [Memory operations](#memory-operations)
-		- [**Specifiable**](#specifiable)
-		- [**Non-Specifiable**](#non-specifiable)
-	- [I/O operations](#io-operations)
-		- [**Specifiable**](#specifiable-1)
-		- [**Non-Specifiable**](#non-specifiable-1)
-- [Functions](#functions)
-	- [Utilitaries](#utilitaries)
-		- [**Specifiable**](#specifiable-2)
-- [Extras](#extras)
-- [Algorithms](#algorithms)
-	- [Char algorithm](#char-algorithm)
-- [Bottom Notes](#bottom-notes)
-	- [Bottom Note 1](#bottom-note-1)
-	- [Bottom Note 2](#bottom-note-2)
-	- [Bottom Note 3](#bottom-note-3)
+- [Braincum Language Specifications](#braincum-language-specifications)
+  - [Summary](#summary)
+  - [Specifiers](#specifiers)
+    - [Subject specifiers](#subject-specifiers)
+    - [Context specifiers](#context-specifiers)
+  - [Operations](#operations)
+    - [Memory operations](#memory-operations)
+      - [With subject required](#with-subject-required)
+      - [Without subject required](#without-subject-required)
+    - [I/O operations](#io-operations)
+      - [With subject required](#with-subject-required-1)
+      - [Without subject required](#without-subject-required-1)
+  - [Functions](#functions)
+    - [Utilitaries](#utilitaries)
+      - [With subject required](#with-subject-required-2)
+  - [Extras](#extras)
+  - [Algorithms](#algorithms)
+    - [Char algorithm](#char-algorithm)
+  - [Bottom Notes](#bottom-notes)
+    - [Bottom Note 1](#bottom-note-1)
+    - [Bottom Note 2](#bottom-note-2)
+    - [Bottom Note 3](#bottom-note-3)
 
-- - - -
+---
 
 ## Specifiers
 
@@ -52,33 +56,33 @@ A specifier indicates the execution context of the following operations until an
 
 ### Memory operations
 
-#### **Specifiable**
+#### With subject required
 
 - `+`: increments value/address by 1.
 - `-`: decrements value/address by 1.
 - `^`: resets value/address to 0.
 - `~`: opposes value/address to bound<sup>[[1](#bottom-note-1)]</sup>.
 - `@`:
-    - value: sets to address modulo 255.
-    - address: sets to value.
+  - value: sets to address modulo 255.
+  - address: sets to value.
 - `'`: applies the [Char algorithm](#char-algorithm).
 - `"`: stringifies the value/address and changes to its ordinal<sup>[[2](#bottom-note-2)]</sup>.
 
-#### **Non-Specifiable**
+#### Without subject required
 
 - `>`: shifts all the cells to the right<sup>[[3](#bottom-note-3)]</sup>.
 - `<`: shifts all the cells to the left<sup>[[3](#bottom-note-3)]</sup>.
 
 ### I/O operations
 
-#### **Specifiable**
+#### With subject required
 
 - `.`: prints the current value/address as an ASCII character.
 - `,`: asks for an integer input between 0 and 255.
 - `!`: throws an error. The error code is determined by the value/address.
 - `#`: prints value/address as an integer.
 
-#### **Non-Specifiable**
+#### Without subject required
 
 - `:`: prints the `n`-th next cells as a string with `n` as the value of the current cell.
 - `;`: prints the last input if not empty, else asksfor another one and prints it.
@@ -90,13 +94,13 @@ A specifier indicates the execution context of the following operations until an
 
 ### Utilitaries
 
-#### **Specifiable**
+#### With subject required
 
 - `r`: adds a random integer between 0 and 255 to the value/address.
 - `s`: sums all the values before the current cell (included) and puts the result as new value/address.
 - `m`:
-    - value: multiplies by address.
-    - address: multiplies by value.
+  - value: multiplies by address.
+  - address: multiplies by value.
 
 ## Extras
 
@@ -104,7 +108,7 @@ A specifier indicates the execution context of the following operations until an
 
 - `\` comments out following characters.
 
-- - - -
+---
 
 ## Algorithms
 
@@ -122,12 +126,12 @@ A retranscription in Python of this algorithm would be as following:
 
 ```py
 if value < 32:
-	value += 32
+    value += 32
 elif value >= 256:
-	value %= 255
+    value %= 255
 ```
 
-- - - -
+---
 
 ## Bottom Notes
 
@@ -136,19 +140,19 @@ elif value >= 256:
 ### Bottom Note 1
 
 Example: 3 would be opposed to 252 (0->3 becomes 255->3).
-[[Go back up](#specifiable)]
+[[Go back up](#with-subject-required)]
 
 ### Bottom Note 2
 
 Example: 3 would be stringified to "3", which has an ordinal of 51.
-[[Go back up](#specifiable)]
+[[Go back up](#with-subject-required)]
 
 ### Bottom Note 3
 
-- In the context of the global array scope, it essentially loses the first cell value or adds a 0 to the left according to the shift direction, as the array is infinite.
+- In the context of the global scope, it essentially loses the first cell value or adds a 0 to the left according to the shift direction, as the array is infinite.
 
-- In the context of a sliced array scope, the bounds are joined on the shift as it was a loop. For example, applying `>` to `[3, 5, 2, 1]` would give `[1, 3, 5, 2]`.
+- In the context of a array scope, the bounds are joined on the shift as it was a loop. For example, applying `>` to `[3, 5, 2, 1]` would give `[1, 3, 5, 2]`.
 
-    [[Go back up](#non-specifiable)]
+  [[Go back up](#without-subject-required)]
 
 [[Go to top](#braincum-language-specifications) | [Home](README.md)]
