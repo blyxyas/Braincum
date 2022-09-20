@@ -16,3 +16,6 @@ dist/
 
 # *- Environment -* #
 .venv/
+
+# *- Minimal implementation -* #
+src/braincum.py

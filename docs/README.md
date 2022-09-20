@@ -4,7 +4,7 @@
 
 Braincum is an esoteric programming language heavily inspired on well-known [Brainfuck](https://en.wikipedia.org/wiki/Brainfuck).
 
-The Python implementation is NOT ready to run for now, **at all**.
+The Python clean implementation is NOT ready to run for now, but you can try Braincum on [this minimal version](https://github.com/qexat/Braincum/discussions/12).  
 However, since specifications are defined on this repository, feel free to make your own in the language of your choice!
 
 If you have a question, please use the [Discussion tab](https://github.com/qexat/Braincum/discussions).
