@@ -9,27 +9,27 @@
 ## Summary
 
 - [Braincum Language Specifications](#braincum-language-specifications)
-  - [Summary](#summary)
-  - [Specifiers](#specifiers)
-    - [Subject specifiers](#subject-specifiers)
-    - [Context specifiers](#context-specifiers)
-  - [Operations](#operations)
-    - [Memory operations](#memory-operations)
-      - [With subject required](#with-subject-required)
-      - [Without subject required](#without-subject-required)
-    - [I/O operations](#io-operations)
-      - [With subject required](#with-subject-required-1)
-      - [Without subject required](#without-subject-required-1)
-  - [Functions](#functions)
-    - [Utilitaries](#utilitaries)
-      - [With subject required](#with-subject-required-2)
-  - [Extras](#extras)
-  - [Algorithms](#algorithms)
-    - [Char algorithm](#char-algorithm)
-  - [Bottom Notes](#bottom-notes)
-    - [Bottom Note 1](#bottom-note-1)
-    - [Bottom Note 2](#bottom-note-2)
-    - [Bottom Note 3](#bottom-note-3)
+	- [Summary](#summary)
+	- [Specifiers](#specifiers)
+		- [Subject specifiers](#subject-specifiers)
+		- [Context specifiers](#context-specifiers)
+	- [Operations](#operations)
+		- [Memory operations](#memory-operations)
+			- [With subject required](#with-subject-required)
+			- [Without subject required](#without-subject-required)
+		- [I/O operations](#io-operations)
+			- [With subject required](#with-subject-required-1)
+			- [Without subject required](#without-subject-required-1)
+	- [Functions](#functions)
+		- [Utilitaries](#utilitaries)
+			- [With subject required](#with-subject-required-2)
+	- [Extras](#extras)
+	- [Algorithms](#algorithms)
+		- [Char algorithm](#char-algorithm)
+	- [Bottom Notes](#bottom-notes)
+		- [Bottom Note 1](#bottom-note-1)
+		- [Bottom Note 2](#bottom-note-2)
+		- [Bottom Note 3](#bottom-note-3)
 
 ---
 
@@ -144,7 +144,7 @@ Example: 3 would be opposed to 252 (0->3 becomes 255->3).
 
 ### Bottom Note 2
 
-Example: 3 would be stringified to "3", which has an ordinal of 51.
+Example: 3 would be stringified to "3", which has an ordinal of 51. If the value is more than 10 the interpreter will panic, because numbers with various digits need to be stringified in multiple cells. For example 33 will need `[3, 3]` instead of `[33]`.
 [[Go back up](#with-subject-required)]
 
 ### Bottom Note 3
