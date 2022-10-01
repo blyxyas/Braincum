@@ -144,7 +144,7 @@ Example: 3 would be opposed to 252 (0->3 becomes 255->3).
 
 ### Bottom Note 2
 
-Example: 3 would be stringified to "3", which has an ordinal of 51. If the value is more than 10 the interpreter will panic, because numbers with various digits need to be stringified in multiple cells. For example 33 will need `[3, 3]` instead of `[33]`.
+Example: 3 would be stringified to "3", which has an ordinal of 51. If the value is more than 10, the leftmost digit ordinal will be stored in the current cell, and the next digits in the following cells, in a similar behavior as `:`.
 [[Go back up](#with-subject-required)]
 
 ### Bottom Note 3
