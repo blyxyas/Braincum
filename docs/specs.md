@@ -106,7 +106,8 @@ A specifier indicates the execution context of the following operations until an
 
 <sub>[[Summary](#summary)]</sub>
 
-- `\` comments out following characters.
+- `(` Opens a comment.
+- `)` Closes a comment.
 
 ---
 
